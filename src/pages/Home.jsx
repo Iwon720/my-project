@@ -20,7 +20,7 @@ const Home = () => {
       <input
         id="name"
         type="text"
-        className="required"
+        className="required blm"
         maxLength = "15"
         placeholder="Name"></input>
       </div>
@@ -32,7 +32,7 @@ const Home = () => {
         <input
           id="surname"
           type="text"
-          className="validate"
+          className="validate blm"
           maxLength = "20"
           placeholder="Surname"></input>
         </div>
@@ -44,7 +44,7 @@ const Home = () => {
       <input
         id="phone"
         type="tel"
-        className="validate"
+        className="validate blm"
         maxLength = "10"
         placeholder="Phone number"></input>
       </div>
@@ -56,7 +56,7 @@ const Home = () => {
         <input
           id="date"
           type="date"
-          className="validate"
+          className="validate blm"
           placeholder="Date of birth"></input>
         </div>
         </li>
@@ -67,7 +67,7 @@ const Home = () => {
             <input
               id="email"
               type="email"
-              className="validate"
+              className="validate blm"
               maxLength="20"
               pattern = "/@/"
               placeholder="E-mail"></input>
@@ -80,7 +80,7 @@ const Home = () => {
               <input
                 id="password"
                 type="password"
-                className="validate"
+                className="validate blm"
                 minLength="8"
                 placeholder="Password"></input>
               </div>
@@ -94,7 +94,7 @@ const Home = () => {
                      <input type="file" multiple></input>
                   </div>
                   <div className="file-path-wrapper">
-                    <input className="file-path validate " type="text" placeholder="Upload some photos"></input>
+                    <input className="file-path validate blm" type="text" placeholder="Upload some photos"></input>
                   </div>
                 </div>
               </form>
@@ -108,7 +108,7 @@ const Home = () => {
         </div>
         <div><a onClick = {() => logOut()}
           class="waves-effect deep-orange lighten-1 btn margin-left">
-            <i class="material-icons left">exit_to_app</i>
+            <i class="material-icons">exit_to_app</i>
           </a>
         </div>
       </div>

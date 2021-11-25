@@ -6,12 +6,15 @@ import AuthContext from "./context";
 
 const App = () => {
   const [isAuth, setIsAuth] = useState(false);
+  const [theme, setTheme] = useState('light');
+  const themeToggler = () => {theme === 'light' ? setTheme('dark') : setTheme('light')}
   useEffect(() => {
     if(window.localStorage.getItem('auth', 'false')){
       setIsAuth(true);
     }
   })
   return (
+    <>   
     <AuthContext.Provider
     value = {{
       isAuth,
@@ -23,6 +26,7 @@ const App = () => {
         <AppRoutes />
       </BrowserRouter>
     </AuthContext.Provider>
+    </>
   );
 };
 

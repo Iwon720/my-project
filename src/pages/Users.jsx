@@ -73,7 +73,7 @@ useEffect(()=>{
                    <input
                      id="name"
                      type="text"
-                     className="validate"
+                     className="validate blm"
                      value={user.name}
                      placeholder="Enter Name"
                      onChange={onChange}
@@ -85,7 +85,7 @@ useEffect(()=>{
                      id="phone"
                      type="tel"
                      value={user.phone}
-                     className="validate"
+                     className="validate blm"
                      placeholder="Enter Phone"
                      onChange={onChange}
                    />
@@ -97,7 +97,7 @@ useEffect(()=>{
                      id="email"
                      type="email"
                      value={user.email}
-                     className="validate"
+                     className="validate blm"
                      placeholder="Enter E-mail"
                      onChange={onChange}
                      />

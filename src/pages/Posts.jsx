@@ -118,7 +118,7 @@ const Posts = () => {
               <input
                 id="name"
                 type="text"
-                className="validate"
+                className="validate blm"
                 value={post.title}
                 placeholder="Enter Title"
                 onChange={onChange}
@@ -130,7 +130,7 @@ const Posts = () => {
                 id="phone"
                 type="tel"
                 value={post.body}
-                className="validate"
+                className="validate blm"
                 placeholder="Enter Body"
                 onChange={onChange}
               />
@@ -142,7 +142,7 @@ const Posts = () => {
                 id="email"
                 type="email"
                 value={post.email}
-                className="validate"
+                className="validate blm"
                 placeholder="Enter E-mail"
                 onChange={onChange}
               />

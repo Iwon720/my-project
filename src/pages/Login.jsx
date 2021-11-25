@@ -25,7 +25,7 @@ const Login = () => {
       setIsAuth(true);
       console.log("заплотил уже");
     } else {
-      setError("wsio fignia, davai po nowoi");
+      setError("wsio fignia, Misha, davai po nowoi");
     }
   };
 
@@ -33,14 +33,14 @@ const Login = () => {
   return (
     <div class="row">
       <form class="col s12">
-        <div class="row">
+        <div class="row row-login">
           <div class="input-field col s6">
             <i class="material-icons prefix">account_circle</i>
             <input
               onChange={onChange}
               id="login"
               type="text"
-              class="validate"
+              class="validate blm"
             />
           </div>
           <div class="input-field col s6">
@@ -49,14 +49,15 @@ const Login = () => {
               onChange={onChange}
               id="pass"
               type="tel"
-              class="validate"
+              class="validate blm"
             />
           </div>
+          <a onClick={() => checkUser()} class="waves-effect waves-light btn deep-orange lighten-1 btn-login">
+            <i class="material-icons left"></i>плоти налоги
+          </a>
         </div>
-        {error && <h1 className = "red-text text-darken-4">{error}</h1>}
-        <a onClick={() => checkUser()} class="waves-effect waves-light btn">
-          <i class="material-icons left"></i>плоти налоги
-        </a>
+        {error && <h1 className="red-text text-darken-4">{error}</h1>}
+
       </form>
     </div>
   );

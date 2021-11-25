@@ -24,7 +24,7 @@ const userSearch = getSearch();
       {props.search &&<div className="row">
         <div className="input-field col s6">
           <i className="material-icons prefix">search</i>
-          <textarea id="icon_prefix2" className="materialize-textarea" onChange={onChange}></textarea>
+          <textarea id="icon_prefix2" className="materialize-textarea blm" onChange={onChange}></textarea>
 
         </div>
       </div>}

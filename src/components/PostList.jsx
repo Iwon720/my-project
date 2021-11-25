@@ -24,7 +24,7 @@ const postSearch = getSearch();
       {props.search &&<div className="row">
         <div className="input-field col s6">
           <i className="material-icons prefix">search</i>
-          <textarea id="icon_prefix2" className="materialize-textarea" onChange={onChange}></textarea>
+          <textarea id="icon_prefix2" className="materialize-textarea blm" onChange={onChange}></textarea>
 
         </div>
       </div>}
@@ -40,7 +40,6 @@ const postSearch = getSearch();
                 </p>
                 </div>
                 <div class="card-action">
-                <a>{post.email}</a>
                 <i className="material-icons"
                 onClick={()=>props.deletePost(post.id)}>delete</i>
                 </div>
