@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 dotenv.config(); 
 const PORT = process.env.PORT;
 const userRouter = require('./routes/userRouter');
+const devicesRouter = require('./routes/devicesRouter');
 
 
 app.use(bodyParser.json());
@@ -18,6 +19,8 @@ app.use(function(req, res, next) {
 
 //USERS
 app.use("/users", userRouter);
+
+app.use("/devices", devicesRouter);
 
 app.listen(PORT, () => { 
     console.log(`Сервер начал прослушивание запросов на порту http://localhost:${PORT}`) 
