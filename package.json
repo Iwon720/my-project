@@ -1,18 +1,22 @@
 {
   "name": "my-server",
   "version": "1.0.0",
-  "description": "server",
+  "description": "This is simple server",
   "main": "server.js",
   "scripts": {
     "start": "nodemon node server.js"
   },
-  "author": "Nazarow",
+  "author": "Chigil",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
     "cross-env": "^7.0.3",
-    "dateformat": "^5.0.2",
+    "date-format": "^3.0.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "mysql2": "^2.3.3",
     "nodemon": "^2.0.15"
-  }
+  },
+  "devDependencies": {}
 }
