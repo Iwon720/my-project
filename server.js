@@ -5,6 +5,9 @@ const dotenv = require('dotenv');
 dotenv.config();
 const PORT = process.env.PORT;
 const userRouter = require('./routes/userRouter');
+const db = require('./models/index');
+
+db.sequelize.sync();
 
 
 app.use(bodyParser.json())

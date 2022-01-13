@@ -1,19 +1,23 @@
-const User = require("../models/userModel.js");
+const db = require('../models/index')
+const User = db.users;
 
 exports.getAll = (req, res) => {
-  res.send(User.getAll());
+  User.findAll({raw: true}).then((users) => {
+    res.send(users)
+  }).catch(err => console.log(err))
 };
 exports.addUser = (req, res) => {
-  //console.log(req.body);
-  // users.push(req.body);
-  // res.send(users);
   const user = new User(req.body);
-  user.save();
-  res.send(User.getAll());
+  User.create(user).then((users) => {
+    req.send(users);
+  })
 };
 exports.deleteUser = (req, res) => {
-  //users = users.filter((user) => user.id !== +req.params.id);
-  //res.send(users);
-  User.delete(+req.params.id);
-  res.send(User.getAll());
+  User.destroy({
+    where: {
+      id: +req.params.id
+    }
+  }).then((res) => {
+    res.send(User.getAll());
+  }).catch(err => console.log(err));
 };

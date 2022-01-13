@@ -1,22 +1,16 @@
-let users = [
-    { name: 'Joseph', id:1, phone:25323232 },
-    { name: 'Marish', id:2, phone:25323232 },
-    { name: 'Johni', id:3, phone:25323232 },
-  ]
-module.exports = class User{
- 
-    constructor(user){
-        this.name = user.name;
-        this.id = user.id;
-        this.phone = user.phone;
-    }
-    save(){
-        users.push(this);
-    }
-    static delete(id){
-        users = users.filter((user) => user.id !== id)
-    }
-    static getAll(){
-        return users;
-    }
-}
+module.exports = (sequelize, Sequelize) => {
+  const User = sequelize.define("user", {
+    id: {
+      type: Sequelize.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    name: {
+      type: Sequelize.STRING,
+    },
+    phone: {
+      type: Sequelize.STRING,
+    },
+  });
+  return User;
+};
