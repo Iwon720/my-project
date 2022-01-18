@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import Posts from "../pages/Posts";
 import Login from "../pages/Login";
 import AuthContext from "../context";
+import Registration from "../pages/Registration";
 // import Loader from "react-loader-spinner";
 
 const AppRoutes = () => {
@@ -30,6 +31,7 @@ const AppRoutes = () => {
      : 
       <Switch>
         <Route exact path="/login" component={Login} />
+        <Route exact path="/registration" component={Registration} />
         <Redirect to = "/login"/>
 
       </Switch>

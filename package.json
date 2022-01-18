@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression": "^7.16.2",
+    "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression": "^.16.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",

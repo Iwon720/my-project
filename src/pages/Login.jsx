@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import AuthContext from "../context";
+import http from '../http'
 
 const Login = () => {
   localStorage.setItem('auth', 'true');
@@ -28,6 +29,13 @@ const Login = () => {
       setError("wsio fignia, Misha, davai po nowoi");
     }
   };
+
+  const login = () => {
+    http.post('/login', inputData).then((res) => {
+      localStorage.setItem('auth', 'true');
+      setIsAuth(true);
+    }).catch((err)=>console.log('wrong data'));
+  }
 
   const { isAuth, setIsAuth } = useContext(AuthContext);
   return (
