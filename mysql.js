@@ -16,17 +16,17 @@ connection.connect(function(err){
     }
 });
 
-const users = [ //запись в таблицу
-    ["Bob", 22],
-    ["Alice", 25],
-    ["Kate", 28]
-];
-const sql = `INSERT INTO users(name, phone) VALUES ?`;
-
-connection.query(sql, [users], function(err, results) {
-    if(err) console.log(err);
-    console.log(results);
-});
+// const users = [ //запись в таблицу
+//     ["Bob", 22],
+//     ["Alice", 25],
+//     ["Kate", 28]
+// ];
+// const sql = `INSERT INTO users(name, phone) VALUES ?`;
+//
+// connection.query(sql, [users], function(err, results) {
+//     if(err) console.log(err);
+//     console.log(results);
+// });
 
 // const sql = `UPDATE users SET phone=? WHERE name=?`; //update, people, update
 // const data = [34, "Tom"];
