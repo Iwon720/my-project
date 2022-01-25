@@ -3,8 +3,8 @@ import AuthContext from "../context";
 
 const Home = () => {
   const logOut = () => {
-    setIsAuth(false)
     localStorage.clear();
+    setIsAuth(false);
   }
   const {isAuth, setIsAuth} = useContext(AuthContext);
 

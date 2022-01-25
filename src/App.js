@@ -9,7 +9,8 @@ const App = () => {
   const [theme, setTheme] = useState('light');
   const themeToggler = () => {theme === 'light' ? setTheme('dark') : setTheme('light')}
   useEffect(() => {
-    if(window.localStorage.getItem('auth', 'false')){
+    console.log(window.localStorage.getItem('auth'))
+    if(window.localStorage.getItem('auth')){
       setIsAuth(true);
     }
   })

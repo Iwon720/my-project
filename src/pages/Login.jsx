@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
 import AuthContext from "../context";
-import http from '../http'
+import http from '../http';
+import { authInterceptor } from "../authInterception";
 
 const Login = () => {
-  localStorage.setItem('auth', 'true');
   const loginData = {
     login: "ganstas",
     pass: "paradise",
@@ -24,6 +24,7 @@ const Login = () => {
   const checkUser = () => {
     if (loginData.login === inputData.login && loginData.pass === inputData.pass) {
       setIsAuth(true);
+      localStorage.setItem('auth', 'true');
       console.log("заплотил уже");
     } else {
       setError("wsio fignia, Misha, davai po nowoi");
@@ -32,6 +33,10 @@ const Login = () => {
 
   const login = () => {
     http.post('/login', inputData).then((res) => {
+      if(res.data.message){
+        setError(res.message)
+        return 
+      }
       localStorage.setItem('auth', 'true');
       setIsAuth(true);
     }).catch((err)=>console.log('wrong data'));
